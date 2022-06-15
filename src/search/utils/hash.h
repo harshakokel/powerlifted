@@ -269,7 +269,7 @@ void feed(HashState &hash_state, const std::vector<T> &vec) {
     std::size_t sz = vec.size();
     feed(hash_state, static_cast<uint64_t>(sz));
     for (unsigned i = 0; i < sz; ++i) {
-        feed(hash_state, vec[i]);
+        feed(hash_state, static_cast<std::uint64_t>(vec[i]));
     }
 }
 

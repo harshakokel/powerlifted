@@ -187,7 +187,7 @@ namespace std {
 namespace utils {
     template<typename Block>
     void feed(HashState &hash_state, const dynamic_bitset::DynamicBitset<Block>& a) {
-        feed(hash_state, a.num_bits);
+        feed(hash_state, static_cast<std::uint64_t>(a.num_bits));
         feed(hash_state, a.blocks);
     }
 }
